@@ -19,3 +19,13 @@ function binaryGap(n) {
     return (x.v === '0' && x.c > a) ? x.c : a
   }, 0);
 }
+
+function binaryGap2(n) {
+  return ((n >>> 0).toString(2)
+    .replace(/1/g, '11')
+    .match(/1(0+)1/g) || [])
+    .reduce(function(a, x) {
+      var n = x.length - 2;
+      return n > a ? n : a;
+    }, 0);
+}
