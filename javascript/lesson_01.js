@@ -7,7 +7,7 @@ function binaryGap(n) {
       a.unshift({ v: x, c: 1 });
     }
     return a;
-  }, []).reverse();
+  }, []);
 
   // remove both ends of the array.
   // since the array's only values are alternating 0 & 1, we know that we
